@@ -1,4 +1,4 @@
-#101.cs——half lambert
+# 101.cs——half lambert
 
 candy like shader, kind of like cats' eye stone (*´艸`*)
 
