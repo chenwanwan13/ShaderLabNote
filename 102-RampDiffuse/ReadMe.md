@@ -1,4 +1,4 @@
-# 101.cs——half lambert
+# 102.cs——ramp diffuse
 
 map diffuse value to a texture.
 
