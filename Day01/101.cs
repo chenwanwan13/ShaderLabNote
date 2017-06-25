@@ -12,15 +12,16 @@ Shader "MyShader/day01" {
 		float _floatA;
 		float _floatB;
 
-		half4 LightingWrapLambert(SurfaceOutput s, half3 lightDir, half atten) {
-		half NdotL = dot(s.Normal, lightDir);
-		half diff = NdotL * _floatA + _floatB;
+	half4 LightingWrapLambert(SurfaceOutput s, half3 lightDir, half atten) {
+		half difLight = dot(s.Normal, lightDir);
+		half hLambert = difLight * _floatA + _floatB;
 		//half diff = NdotL * 1 + 1;
 		half4 c;
-		c.rgb = s.Albedo * _LightColor0.rgb * (diff * atten);
+		c.rgb = s.Albedo * _LightColor0.rgb * (hLambert * atten);
 		c.a = s.Alpha;
 		return c;
 	}
+
 
 	struct Input {
 		float2 uv_MainTex;
